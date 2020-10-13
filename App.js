@@ -8,10 +8,15 @@ import ProfileScreen from './Profile.js';
 import HomeScreen from './Home.js';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import GoogleSheetsProvider from 'react-db-google-sheets';
 
-  
+    require('dotenv').config;
   const Stack = createStackNavigator();
-
+    const App = () =>(
+    <GoogleSheetsProvider>
+      <diet/>
+    </GoogleSheetsProvider>
+  )
   function App(){
     return(
       <NavigationContainer>
