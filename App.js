@@ -6,26 +6,25 @@ import FoodScreen from './Food.js';
 import GymScreen from './Gym.js';
 import ProfileScreen from './Profile.js';
 import HomeScreen from './Home.js';
+import CardioScreen from './Cardio.js';
+import StrengthScreen from './Strength.js';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import GoogleSheetsProvider from 'react-db-google-sheets';
 
-    require('dotenv').config;
   const Stack = createStackNavigator();
-    const App = () =>(
-    <GoogleSheetsProvider>
-      <diet/>
-    </GoogleSheetsProvider>
-  )
+
   function App(){
     return(
-      <NavigationContainer>
-        <Stack.Navigator initalRouteName= "Home">
+      <NavigationContainer> 
+        <Stack.Navigator initalRouteName= "Home" screenOptions={{headerShown: false}}>
           <Stack.Screen name = "Home" component = {HomeScreen}/>
           <Stack.Screen name=  "Sleep" component = {SleepScreen}/>
           <Stack.Screen name=  "Profile" component = {ProfileScreen}/>
           <Stack.Screen name=  "Food" component = {FoodScreen}/>
           <Stack.Screen name=  "Gym" component = {GymScreen}/>
+          <Stack.Screen name= "Cardio" component = {CardioScreen}/>
+          <Stack.Screen name = "Strength" component = {StrengthScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     )
