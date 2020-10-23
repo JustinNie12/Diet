@@ -8,6 +8,9 @@ import ProfileScreen from './Profile.js';
 import HomeScreen from './Home.js';
 import CardioScreen from './Cardio.js';
 import StrengthScreen from './Strength.js';
+import OtherScreen from './Other.js';
+import LogScreen from './Log.js';
+import FeaturedScreen from './Featured.js';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import GoogleSheetsProvider from 'react-db-google-sheets';
@@ -25,6 +28,9 @@ import GoogleSheetsProvider from 'react-db-google-sheets';
           <Stack.Screen name=  "Gym" component = {GymScreen}/>
           <Stack.Screen name= "Cardio" component = {CardioScreen}/>
           <Stack.Screen name = "Strength" component = {StrengthScreen}/>
+          <Stack.Screen name = "Other" component = {OtherScreen}/>
+          <Stack.Screen name = "Log" component = {LogScreen}/>
+          <Stack.Screen name = "Featured" component = {FeaturedScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     )
