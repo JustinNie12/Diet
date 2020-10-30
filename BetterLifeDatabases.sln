@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterLifeDatabases", "BetterLifeDatabases\BetterLifeDatabases.csproj", "{31707673-5A48-453B-8917-CB3108642FF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31707673-5A48-453B-8917-CB3108642FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31707673-5A48-453B-8917-CB3108642FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31707673-5A48-453B-8917-CB3108642FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31707673-5A48-453B-8917-CB3108642FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AFABC2E-6580-4E1D-95F0-3C76EDFD1D0A}
+	EndGlobalSection
+EndGlobal
