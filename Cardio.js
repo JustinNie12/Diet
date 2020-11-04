@@ -1,13 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View,ScrollView } from 'react-native';
+import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View,ScrollView, TextInput } from 'react-native';
 import home from './assets/home.png';
 import sleep from './assets/sleep.png';
 
 
+const DurationTextInput = props =>{
+  return(
+    <TextInput style ={{position:'absolute', top:150,left:200}}>
+  editable ={true}
+  maxLength={10}
+  </TextInput>
+  );
+}
+export const DurationTextInputMultiline = ()=>{
+  const[value, onChangeText] = React.useState('PlaceHolder');
+
+  return(<View style = {{backgroundColor:'gray',borderBottomColor:'black',borderWidth:5}}>
+  <DurationTextInput
+  style = {styles.textInput}
+  keyboardType = 'numeric'
+  value = {value}
+  placeholder = {'blank'}
+  onChangeText = {text => onChangeText(text)}
+  />
+  </View>
+  );
+}
 class CardioScreen extends React.Component{
+
   state={
     workout: 0,
+    duration:0,
     pressed:false,
     backgroundColor1:'white',
     backgroundColor2:'white',
@@ -28,6 +52,10 @@ class CardioScreen extends React.Component{
         this.setState({pressed:true,backgroundColor4:'gray',backgroundColor2:'white',backgroundColor3:'white',backgroundColor1:'white',workout:x})
         alert(x);}
     }
+    onTextChanged(text){
+      this.setState({duration:text})
+    }
+
   static navigationOptions = {
     title: 'Cardio',
   };
@@ -37,7 +65,8 @@ class CardioScreen extends React.Component{
       <ImageBackground source= {{uri : 'https://wallpaperaccess.com/full/722350.jpg'}} style ={{width:500,height:800}}>
         </ImageBackground>
       <Text style = {styles.pic}>Cardio Workouts</Text>
-    
+
+
     <TouchableOpacity style = {{backgroundColor:this.state.backgroundColor1,padding:10,borderRadius:5,position:'absolute',left:10, top:100}} onPress = {()=>this.setWorkout(1)}>
       <Text style = {styles.text}>Walking</Text>
     </TouchableOpacity>
@@ -76,6 +105,8 @@ class CardioScreen extends React.Component{
   )
 }}
 export default CardioScreen;
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -141,5 +172,11 @@ const styles = StyleSheet.create({
   text:{
     fontWeight:'bold',
     fontSize:20,
+  },
+  textInput:{
+    height:50,
+    width:50,
+    borderColor:'gray',
+    borderWidth:1,
   },
 });
