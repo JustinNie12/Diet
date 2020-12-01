@@ -1,0 +1,15 @@
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\bin\Debug\Database1.mdf
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\bin\Debug\Database1_log.ldf
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\bin\Debug\BetterLifeDatabases.exe.config
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\bin\Debug\BetterLifeDatabases.exe
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\bin\Debug\BetterLifeDatabases.pdb
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.csprojAssemblyReference.cache
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.Form1.resources
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.Properties.Resources.resources
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.csproj.GenerateResource.cache
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.exe
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.pdb
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\bin\Debug\aa\BetterLifeDatabases.resources.dll
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\BetterLifeDatabases.Form1.aa.resources
+C:\Users\Daniel\source\repos\BetterLifeDatabases\BetterLifeDatabases\obj\Debug\aa\BetterLifeDatabases.resources.dll
