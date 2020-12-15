@@ -1,24 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View} from 'react-native';
 import SleepScreen from './Sleep.js';
 import FoodScreen from './Food.js';
 import GymScreen from './Gym.js';
 import ProfileScreen from './Profile.js';
 import HomeScreen from './Home.js';
-import CardioScreen from './Cardio.js';
+import {CardioScreen} from './Cardio.js';
 import StrengthScreen from './Strength.js';
 import OtherScreen from './Other.js';
 import LogScreen from './Log.js';
 import FeaturedScreen from './Featured.js';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import GoogleSheetsProvider from 'react-db-google-sheets';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 
   const Stack = createStackNavigator();
 
   function App(){
     return(
+      <SafeAreaProvider>
       <NavigationContainer> 
         <Stack.Navigator initalRouteName= "Home" screenOptions={{headerShown: false}}>
           <Stack.Screen name = "Home" component = {HomeScreen}/>
@@ -33,6 +35,7 @@ import GoogleSheetsProvider from 'react-db-google-sheets';
           <Stack.Screen name = "Featured" component = {FeaturedScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
+      </SafeAreaProvider>
     )
   }
   export default App;

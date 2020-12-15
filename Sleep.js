@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity,ImageBackground,SafeAreaView, Image, StyleSheet, Text, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import home from './assets/home.png';
 import sleep from './assets/sleep.png';
 
@@ -24,8 +25,12 @@ const getCurrentDate=()=>{
       alert(this.state.hoursSlept);
     }
     render(){
-    return(
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      /*<SafeAreaView> style = {styles.container}> */
+      //<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+    return( 
+      <SafeAreaView>
+        <ScrollView>
         <ImageBackground source={{uri:'https://cutewallpaper.org/21/night-background-hd/night-sky-stars-wallpaper-background-phone-hd-in-2019-.jpg'}}style ={{width:500,height:800}}></ImageBackground>
         <Text style = {styles.pic}>Sleep</Text>
 
@@ -36,7 +41,8 @@ const getCurrentDate=()=>{
         <TouchableOpacity onPress = {()=>this.getSleep()} style = {{position:'absolute', top:200,left:180,width:70,height:50,borderRadius:5,alignItems:'center',backgroundColor:'green'}}>
           <Text style ={{fontWeight:'bold', fontSize:30,color:'white'}}>Enter</Text>
         </TouchableOpacity>
-        </View>
+        </View> 
+
         <TouchableOpacity onPress= {() => this.props.navigation.navigate('Home')} style = {styles.button}>
       <Image source = {home} style = {{width:50,height:50,}}/>
       </TouchableOpacity>
@@ -52,7 +58,8 @@ const getCurrentDate=()=>{
       <TouchableOpacity onPress = {() => this.props.navigation.navigate('Gym')} style = {styles.button5}>
         <Image source = {{uri:'https://static.thenounproject.com/png/5250-200.png'}} style = {{width:50, height:50,}}/>
       </TouchableOpacity>
-      </View>
+      </ScrollView>
+      </SafeAreaView>
     )
   }}
   export default SleepScreen;

@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View, NativeAppEventEmitter } from 'react-native';
+import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View, NativeAppEventEmitter, SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import home from './assets/home.png';
 import sleep from './assets/sleep.png';
 
@@ -9,8 +10,10 @@ class FoodScreen extends React.Component{
    title : 'Food',
  };
  render(){
+   //<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <SafeAreaView>
+      <ScrollView>
       <ImageBackground source  = {{uri:'https://wallpaper.dog/large/5110.jpg'}}style ={{width:500,height:800}}></ImageBackground>
       <Text style = {styles.pic}>Calorie Counter</Text>
 
@@ -33,7 +36,7 @@ class FoodScreen extends React.Component{
         <Image source = {{uri:'https://media.istockphoto.com/photos/thanksgiving-dinner-background-picture-id1050723684?k=6&m=1050723684&s=170667a&w=0&h=8PXfqetEmtHQTJ072_zuKFCcn52O7FvEh82KCsKvJDI='}} style = {{width:315,height:120,position:'absolute'}}></Image>
         <Text style = {styles.bigText}>       Dinner       </Text>
       </TouchableOpacity>
-
+      
       <TouchableOpacity onPress= {() =>   this.props.navigation.navigate('Home')} style = {styles.button}>
     <Image source = {home} style = {{width:50,height:50,}}/>
     </TouchableOpacity>
@@ -49,7 +52,8 @@ class FoodScreen extends React.Component{
     <TouchableOpacity onPress = {() => this.props.navigation.navigate('Gym')} style = {styles.button5}>
       <Image source = {{uri:'https://static.thenounproject.com/png/5250-200.png'}} style = {{width:50, height:50,}}/>
     </TouchableOpacity>
-    </View>
+    </ScrollView>
+    </SafeAreaView>
   )
 }}
 export default FoodScreen;

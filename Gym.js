@@ -3,7 +3,7 @@ import * as React from 'react';
 import { TouchableOpacity,ImageBackground, Image, StyleSheet, Text, View } from 'react-native';
 import home from './assets/home.png';
 import sleep from './assets/sleep.png';
-
+import {SafeAreaView } from 'react-native';
 
 class GymScreen extends React.Component{
   static navigationOptions = {
@@ -55,6 +55,7 @@ class GymScreen extends React.Component{
     </View>
   )
 }}
+
 export default GymScreen;
 const styles = StyleSheet.create({
   container: {

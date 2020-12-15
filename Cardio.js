@@ -5,10 +5,10 @@ import home from './assets/home.png';
 import sleep from './assets/sleep.png';
 
 
-  export const DurationTextInput = props =>{
-  const[value, onChangeText] = React.useState('PlaceHolder');
+  //export const DurationTextInput = props =>{
+  //const[value, onChangeText] = React.useState('PlaceHolder');
   
-  return(
+ /* return(
     <View style = {{position:'absolute',top:200,left:50}}>
     <TextInput style = {{width:200,height:200}} keyboardType = 'number-pad'
     value = {value} onChangeText = {text => onChangeText(text)} placeholder={'blank'}/>
@@ -33,7 +33,7 @@ export const DurationTextInputMultiline = ()=>{
   </View>
   );
 }*/ 
-export class CardioScreen extends React.Component{
+ export  class CardioScreen extends React.Component{
 
   state={
     workout: '0',

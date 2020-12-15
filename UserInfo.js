@@ -13,4 +13,5 @@ UserInfo.propTypes = {
     sheet1: PropTypes.arrayOf(PropTypes.object)
   })
 }
-export default withGoogleSheets('sheet1')(UserInfo);
+
+//export default withGoogleSheets('sheet1')(UserInfo);
